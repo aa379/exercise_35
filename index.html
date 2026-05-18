@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>JS作業</title>
+</head>
+<body>
+
+    <p><strong>1. 原始物件的所有屬性：</strong></p>
+    <div id="prop"></div>
+
+    <p><strong>2. 刪除 age 屬性後的物件：</strong></p>
+    <pre id="obj"></pre>
+
+<script>
+    // 原始物件
+    var Person = {
+        firstName : "Tony",
+        lastName : "Lee",
+        age : 50,
+        eyeColor : "Blue"
+    };
+
+    // 1. 列出所有屬性並顯示
+    document.getElementById('prop').textContent = Object.keys(Person).join(', ');
+
+    // 2. 刪除 age 屬性
+    delete Person.age;
+
+    // 3. 印出刪除後的物件
+    document.getElementById('obj').textContent = JSON.stringify(Person, null, 2);
+</script>
+
+</body>
+</html>
